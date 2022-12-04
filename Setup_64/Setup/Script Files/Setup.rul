@@ -1,0 +1,100 @@
+#include "ifx.h"
+
+export prototype CheckRegistry(HWND);         
+
+function CheckRegistry(hMSI)
+begin       
+
+	RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+	
+	REGDB_OPTIONS = REGDB_OPTIONS | REGDB_OPTION_WOW64_64KEY ;
+
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:409\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif; 
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.0\\ACAD-8001:419\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif;
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:409\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif;  
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.1\\ACAD-9001:419\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif; 
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:409\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif;
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R18.2\\ACAD-A001:419\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif;
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon_2013.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:409\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif;
+	if(RegDBKeyExist("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications") > 0) then
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon\\","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon\\commands","");
+		RegDBCreateKeyEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon\\groups","");
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon","DESCRIPTION",REGDB_STRING,"RockWool",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon","LoadCtrls",REGDB_NUMBER,"2",-1);                 
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon","Loader",REGDB_STRING,INSTALLDIR ^ "ROOFUklon_2013.dll",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon\\commands","ru",REGDB_STRING,"",-1);
+		RegDBSetKeyValueEx("SOFTWARE\\Autodesk\\AutoCAD\\R19.0\\ACAD-B001:419\\Applications\\ROOFUklon\\groups","RockWool",REGDB_STRING,"",-1);
+	endif;
+end;
